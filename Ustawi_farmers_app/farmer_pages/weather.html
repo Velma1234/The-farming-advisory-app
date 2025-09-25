@@ -4,14 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ustawi</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <div class="weatherDashboard"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="planting_seasons.html">Seasons</a></li>
+             <li><a href="market_prices.html">Market</a></li>
+        </ul>  
+    <div class="weatherDashboard">
+
     <h1>Weather</h1>
-    <form action="">
+
+    <form action="" class="searchForm">
         <input type="text" placeholder="Enter city"> 
         <button type="button" class="cityBtn">SUBMIT</button>
     </form>
+    <div class="cityForecast">
+       
+        <div>
+            <h2>Bungoma</h2>
+            <p>
+                Tuesday 14:49, Scattered Clouds <br> Humidity: <span> 66% </span> Wind: <span>3.13km/h</span> 
+            </p>
+            
+        </div >
+
+          <div class="weatherTempSection" >
+            <div class="weatherTempIcon">🌦️</div>
+            <div class="weatherTemp">20</div>
+            <div class="weatherTempSymbol">°C</div>
+          </div>
+    </div>
+    
     
 
 

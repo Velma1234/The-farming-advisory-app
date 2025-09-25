@@ -1,0 +1,116 @@
+body{
+    padding: 20px;
+    background-color: #E6FFE6;
+    color: #001A00;
+    margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav{
+    
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    
+}
+a{
+    text-decoration: none;
+}
+h1{
+    text-align: center;
+}
+/* register and login form styling*/
+
+.registerForm ,.loginForm {
+    background-color: #00D100;
+    padding: 20px;
+    width: 400px;
+    height: fit-content;
+    border-radius: 5px;
+    margin: 0 auto;
+ box-shadow: #00800051 1px 4px 4px 1px;
+    
+}
+
+.registerForm label , .loginForm label{
+    display: block;
+    font-weight: bold;
+    padding: 5px;
+    
+
+}
+.registerForm input, .loginForm input{
+    padding: 10px 20px;
+    border-color: #E6FFE6;
+    border-radius: 5px;
+    width:90%;
+    color: #E6FFE6;
+}
+
+.registerForm button ,.loginForm button{
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    background-color: #001A00;
+    color: #E6FFE6;
+    font-weight: bold;
+    border-radius: 5px;
+    width:90%;
+}
+
+
+ /*weather dashboard styling*/
+.weatherDashboard{
+    background-color: white ;
+    padding: 10px;
+    border-radius: 3px;
+    width: 600px;
+    margin: 0 auto;
+    box-shadow: #008000 1px 1px 4px 1px;
+}
+.weatherDashboard h2{
+    margin: 0;
+    
+}
+.searchForm  input{
+    background-color :  #E6FFE6 ;
+    padding: 15px 20px;
+    border: #001A00;
+    border-radius: 5px; 
+    width: 70%;
+    font-size: 16px;
+    color: #E6FFE6;
+
+}
+.searchForm button{
+    padding: 14px 29px;
+    background-color: #001A00;
+    border-radius: 3px;
+    color: #E6FFE6;
+    font-weight: bolder;
+}
+.cityForecast{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.cityForecast span{
+    color:#00FF00;
+    font-weight: 600;
+}
+.weatherTempSection{
+    display: flex;  
+}
+.weatherTemp{
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.weatherTempIcon{
+    margin-top: 33px;
+    
+}
+.weatherTempSymbol{
+    padding-top: 20px;
+}
