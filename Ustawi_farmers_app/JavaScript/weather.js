@@ -26,7 +26,7 @@ async function handleCitySearch(event){
     let weatherIcon = document.getElementById("weatherTempIcon");
 
 //API setup
-let weatherAPIKey= "d57ccf751c843fd0e493f1c8c43d92d1"
+let weatherAPIKey= "77829e423734c56cac2f97faf5dcc140"
 let weatherAPIurl = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${weatherAPIKey}&units=metric`;
 
 
@@ -65,7 +65,56 @@ try {
         forecastContainer.innerHTML ="";
     
 }
+// handling forecast section
+let weatherForecast = document.getElementById("weatherForecast")
 
+   // clear previos forecasts before adding new fore cast
+   weatherForecast.innerHTML= "";
+
+   // adding forecast API
+   let forecastUrl= `https://api.openweathermap.org/data/2.5/forecast?q=${cityValue}&appid=${weatherAPIKey}&units=metric`;
+
+   try {
+    let forecastResponse = await fetch(forecastUrl);
+    if(!forecastResponse.ok) throw new Error("Forecast not found");
+
+    let forecastData = await forecastResponse.json();
+    // API 
+    let dailyForeCasts= forecastData.list.filter(item =>
+        item.dt_txt.includes("12:00:00")
+    );
+    dailyForeCasts.forEach(day =>{
+        //date
+        let date = new Date(day.dt_txt);
+        let options = {weekday: "short", month:"short", day:"numeric"};
+        let dayName = date.toLocaleDateString(undefined, options);
+
+        //icon
+        let iconCode = day.weather[0].icon;
+        let iconUrl =`https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+        
+        //temperature
+        let temperature = Math.round(day.main.temp);
+
+        //creating forecast item and keeping html structure;
+
+        let forecastItem = document.createElement("div");
+        forecastItem.classList.add("weatherForecastDay");
+
+        forecastItem.innerHTML =`
+        <div class="weatherForecastDate">${dayName}</div>
+         <div class="weatherForecastIcon"><img   src="${iconUrl}" alt=""></div>
+         <div class="weatherForecastTemp"> <strong>${temperature}</strong>°C</div>
+        `;
+         
+        weatherForecast.appendChild(forecastItem);
+
+    });
+
+    
+   } catch (error) {
+    console.error("forecast error", error.message);
+   }
 }
 
 //adding event listener to the form when button is clicked, handleCitySearchfunction is called
