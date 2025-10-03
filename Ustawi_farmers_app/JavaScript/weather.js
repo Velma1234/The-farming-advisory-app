@@ -20,7 +20,7 @@ async function handleCitySearch(event){
    citySearchInput.value="";
 
 
-    // targeting weather info 
+    // targeting weather information 
     let weatherInfo = document.getElementById("WeatherInfo");
     let weatherTemp = document.getElementById("weatherTemp");
     let weatherIcon = document.getElementById("weatherTempIcon");

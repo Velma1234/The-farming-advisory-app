@@ -1,9 +1,16 @@
 body{
     padding: 20px;
     background-color: #E6FFE6;
+    background-image: url(../images/farmBackgroundimg.jpg);
     color: #001A00;
     margin: 0 auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav{
+    padding: 5px;
+    background-color: #001A00;
+    color: #E6FFE6;
+    
 }
 
 ul{
@@ -14,6 +21,7 @@ ul{
 }
 a{
     text-decoration: none;
+    color: #E6FFE6;
 }
 h1{
     text-align: center;
@@ -21,13 +29,13 @@ h1{
 /* register and login form styling*/
 
 .registerForm ,.loginForm {
-    background-color: #00D100;
+    background-color: #00d10089;
     padding: 20px;
     width: 400px;
     height: fit-content;
     border-radius: 5px;
     margin: 0 auto;
- box-shadow: #00800051 1px 4px 4px 1px;
+   box-shadow: #00800051 1px 4px 4px 1px;
     
 }
 
@@ -43,7 +51,7 @@ h1{
     border-color: #E6FFE6;
     border-radius: 5px;
     width:90%;
-    color: #E6FFE6;
+    color: #001A00;
 }
 
 .registerForm button ,.loginForm button{
@@ -60,7 +68,7 @@ h1{
 
  /*weather dashboard styling*/
 .weatherDashboard{
-    background-color: white ;
+    background-color: rgba(255, 255, 255, 0.423) ;
     padding: 10px;
     border-radius: 3px;
     width: 600px;
@@ -130,6 +138,63 @@ h1{
     padding: 0 10px;
 }
 
-/* responsive
+/* styling marketprices dashboard*/
+.searchSection {
+    align-items: center;
+    padding: 10px;
+}
+.searchSection  input{
+    background-color :  #E6FFE6 ;
+    padding: 15px 20px;
+    border: #001A00;
+    border-radius: 5px; 
+    width: 70%;
+    font-size: 16px;
+    color: #001A00;
 
-@media(
+}
+
+.searchSection select{
+    padding: 14px 29px;
+    background-color: #001A00;
+    border-radius: 3px;
+    color: #E6FFE6;
+    font-weight: bolder;
+}
+.searchSection button{
+    padding: 14px 29px;
+    background-color: #001A00;
+    border-radius: 3px;
+    color: #E6FFE6;
+    font-weight: bolder;
+}
+.marketGrid{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: space-around;
+
+}
+.marketCard{
+    background-color: #e6ffe677;
+    padding:10px;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+}
+ .marketCard button{
+    padding: 14px 29px;
+    background-color: #001A00;
+    border-radius: 3px;
+    color: #E6FFE6;
+    font-weight: bolder;
+ }
+.marketCard img {
+    border-radius: 5px;
+    width: 300px;
+    height: 200px;
+}
+ 
+/* responsive*/
+
+@media screen and (min-width:480px) and (macx-width

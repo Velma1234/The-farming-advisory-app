@@ -9,14 +9,13 @@
 <body>
     <nav class="navbar">
         <ul>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="weather.html">Weather</a></li>
-            <li><a href="planting_seasons.html">Seasons</a></li>
-             <li><a href="market_prices.html">Market</a></li>
+            <li><a href="register.php">Register</a></li>
+            <li><a href="weather.php">Weather</a></li>
+            <li><a href="planting_seasons.php">Seasons</a></li>
+             <li><a href="market_prices.php">Market</a></li>
         </ul> 
     </nav>
-
+<br><br>
     <div class="weatherDashboard">
 
     <h1>Weather</h1>
